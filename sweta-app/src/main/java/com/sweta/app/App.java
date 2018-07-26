@@ -25,6 +25,6 @@ public class App
             num2 = sumOfPrevTwo;
         }
 
-   
+   System.out.print(" ");
     }
 }
