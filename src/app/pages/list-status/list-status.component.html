@@ -1,0 +1,46 @@
+<app-sidenav></app-sidenav>
+
+
+
+<div class="container">
+
+   
+
+          <button type="button" class="btn btn-primary pull-right button" [routerLink]='["/createStatus"]'>+Create Status</button> 
+
+          <h2>Status</h2>
+
+        <table class="table table-striped spacing">
+        <thead>
+        <tr>
+  
+        <th>Sr No.</th>
+        
+        <th>Status</th>
+
+        <th>Active/Inactive</th>
+
+  
+        <th>Edit</th>
+  
+        </tr>
+      </thead>
+
+      <tbody>
+      
+        <tr *ngFor="let state of statusList">
+        <td ><h5></h5></td>
+       
+        
+        <td>{{ state.status }}</td>
+
+        <td>{{ state.isArchived }}</td>
+        <td><i class="material-icons icon"><a (click)="updateStatus(state)">border_color</a></i></td>
+  
+        </tr>
+      </tbody>
+        
+        </table>
+     
+          
+    </div>

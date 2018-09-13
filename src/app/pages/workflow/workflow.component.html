@@ -1,0 +1,57 @@
+<app-sidenav></app-sidenav>
+<div class="container">
+
+  <!-- <a [routerLink]='["/WorkflowCreateComponent"]'>  -->
+  
+  <button type="button" class="btn btn-primary pull-right button" [routerLink]='["/createWorkflowPage"]' >+Create Workflow
+    <!-- (click)="createWorkflow" -->
+  </button>
+  
+  <!-- </a> -->
+  
+  <h2>WorkFlow</h2>
+  
+  <table class="table table-striped spacing">
+  
+  <thead>
+  
+  <tr>
+  
+  <!-- <th>Id</th> -->
+  <th>Sr No.</th>
+  <th>Workflow Name</th>
+  
+  <th>Description</th>
+  
+  <th>Active</th>
+
+  <th>Edit</th>
+  
+  </tr>
+  
+  </thead>
+  
+  <tbody>
+  
+  <tr *ngFor="let workflow of workflowList">
+  
+  <!-- <td>{{ workflow.id }}</td> -->
+  <td ><h5></h5></td>
+  <td>{{ workflow.name }}</td>
+  
+  <td>{{ workflow.description }}</td>
+  
+  <td>{{ workflow.isActive }}</td> 
+
+  
+  <td>
+    <i class="material-icons icon">border_color</i>
+  </td>
+  
+  </tr>
+  
+  </tbody>
+  
+  </table>
+  
+  </div>

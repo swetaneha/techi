@@ -1,0 +1,103 @@
+@import 'src/app/_style/variable';
+
+$color_4: red;
+
+
+/* Change styles for span and cancel button on extra small screens */
+.container {
+	width: 400px;
+	height: 400px;
+	padding: 10px;
+	border: 2px solid gray;
+	position: relative;
+	top:120px;
+
+}
+.signin {
+	color: $color_3;
+	font-family: $font_family_1;
+	font-size: 24px;
+}
+.fields {
+	margin-top: 30px;
+}
+
+.red-alert {
+	color: $color_4;
+	margin-left: 20px;
+}
+input[type=text], input[type=password] {
+	width: 320px;
+	height: 50px;
+	display: inline;
+	border: 1px solid lightblue;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	margin-left: 30%;
+}
+.button {
+	background-color: $background_color_1;
+	border: none;
+	color: $color_2;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 22px;
+	cursor: pointer;
+	border-radius: 12px;
+	height: 40px;
+	width: 150px;
+	margin-top: 30px;
+	font-family: $font_family_1;
+	position: absolute;
+	top: 50%;
+}
+button {
+	&:hover {
+		opacity: 0.8;
+	}
+}
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+input {
+	text-align: center;
+}
+
+.input-container {
+	display: -ms-flexbox;
+	display: flex;
+	width: 150%;
+	margin-bottom: 15px;
+}
+.icons {
+	padding: 10px;
+	background: black;
+	color: $color_2;
+	min-width: 50px;
+	text-align: center;
+	font-size: 30px;
+}
+.input-field {
+	width: 100%;
+	padding: 10px;
+	outline: none;
+	&:focus {
+		border: 2px solid $background_color_1;
+	}
+}
+
+
+
+
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}

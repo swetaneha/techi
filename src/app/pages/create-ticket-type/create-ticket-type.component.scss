@@ -1,0 +1,41 @@
+$background_color_3: #01c0c8;
+$color_1: white;
+$font_family_1: Poppins;
+
+.container{
+
+    margin-left: 21%;
+    .button {
+            background-color: $background_color_3;
+            border: none;
+            color: $color_1;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 12px;
+            height: 40px;
+            width: 250px;
+            margin-top: 30px;
+            font-family: $font_family_1;
+        }
+        button {
+            &:hover {
+                opacity: 0.8;
+            }
+        } 
+    
+}
+.ng-valid[required], .ng-valid.required {
+
+    border-left: 5px solid #42A948; /* green */
+    
+    }
+    
+    
+    .ng-invalid:not(form) {
+    
+    border-left: 5px solid #a94442; /* red */
+    
+    }
+    

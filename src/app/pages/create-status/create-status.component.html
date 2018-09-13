@@ -1,0 +1,37 @@
+<app-sidenav></app-sidenav>
+
+<div class="container">
+        <h1>Create Status </h1>
+  <div>
+      <!-- <div class="col-sm-2 sidenav1">
+          <app-admin-config></app-admin-config>
+      </div> -->
+      <form >
+      <div class=" form-group ">
+      <label for="input"><h4>New Status:</h4></label>
+      <input type="text" class="form-control" [(ngModel)]="status.status" [ngModelOptions]="{standalone: true}" placeholder="status" id="input" required>
+      </div>
+      <div>
+      <!-- <button type="submit" (click)="addStatus(status)"  class="btn btn-success button" ><a href="/liststatus">Submit</a></button> -->
+      <button type="submit" (click)="addStatus(status)"  class="btn btn-success button" >Submit</button>
+      </div>
+      <!-- <div class="col-sm-2">
+              <div class="row">
+                      <button (click)="addStatus(status)" class="button1"> 
+                          Create
+                          <!-- <a href="/liststatus">
+                          Create
+                          </a>
+                      </button>
+                      <button class="button"> 
+                              <a href="/liststatus">
+                                  Back
+                              </a>
+                          </button>
+              </div>
+          </div> -->
+          
+        <notifier-container></notifier-container>
+  </form>
+      </div>
+      </div>

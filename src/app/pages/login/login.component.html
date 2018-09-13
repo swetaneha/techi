@@ -1,0 +1,48 @@
+
+<div class="box">
+    <div class="container">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">   
+        <div class="row ">
+            <div class="col-sm-12 signin">Sign In</div>
+        </div>
+       
+    
+        <div class="row fields">
+        <div class="input-container form-group col-sm-12">
+            <i class="material-icons icons">account_circle</i>
+            <input class="form-control input-field" formControlName="username" type="text" placeholder="Enter Username" [ngClass]="{ 'is-invalid': submitted && loginFormFields.username.errors }" />
+            <div *ngIf="submitted && loginFormFields.username.errors" class="invalid-feedback">
+                    <div class="red-alert" *ngIf="loginFormFields.username.errors.required">Username is required</div>
+                </div>
+        </div>
+        </div>
+
+        <div class="row fields">
+            <div class="input-container col-sm-12 form-group">
+                <i class="material-icons icons">lock</i>
+                <input class="form-control input-field" formControlName="password" type="password" placeholder="Enter Password" name="password" [ngClass]="{ 'is-invalid': submitted && loginFormFields.password.errors }" />
+                <div *ngIf="submitted && loginFormFields.password.errors" class="invalid-feedback">
+                        <div class="red-alert" *ngIf="loginFormFields.password.errors.required">Password is required</div>
+                    </div>
+            </div>
+            </div>
+        
+        
+       
+        
+        <div *ngIf="message" class="error red-alert" >{{message}}</div>
+        
+        
+        <div class="row fields form-group">
+        
+          <div class="col-sm-12 wrapper">
+              
+                  <button class="btn btn-primary button">Login</button>
+              
+          </div>
+         
+        </div>
+      </form>  
+    </div>
+  </div>
+

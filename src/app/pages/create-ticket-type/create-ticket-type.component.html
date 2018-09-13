@@ -1,0 +1,116 @@
+<app-sidenav></app-sidenav>
+<div class="container">
+
+
+
+  <h1>Ticket Type </h1>
+  
+  
+  <form #tickettypeform="ngForm">
+  
+  
+  <div class="form-group">
+  
+  <label for="tickettypeinput">Ticket Type</label>
+  
+  <input type="text" class="form-control" id="tickettypeinput"
+  
+  [(ngModel)]="ticketType.ticketType" name="tickettypeinput" #tickettypeinput="ngModel" required>
+  
+  
+  
+  <div [hidden]="tickettypeinput.valid || tickettypeinput.pristine" class="alert alert-danger">
+  
+  Ticket Type is Required
+  
+  </div>
+  
+  </div>
+  
+  
+  
+  
+  <div class="form-group">
+  
+  
+  <label for="description">Description</label>
+  
+  <input type="text" class="form-control" id="description"
+  
+  [(ngModel)]="ticketType.description" name="description">
+  
+  
+  </div>
+  
+  
+  <div class="form-group">
+  
+  <label for="workFlow">WorkFlow</label>
+  
+  <select class="form-control" [(ngModel)]="ticketType.workFlow" name = "workFlow" id="workFlow" #workFlow="ngModel" required >
+  
+  <option *ngFor="let workflow of workFlowList" [ngValue] = "workflow.name">
+  
+  {{workflow.name}}
+  
+  </option>
+  
+  </select> 
+  
+  <!-- <angular2-multiselect [data]="adminItemList" [(ngModel)]="ticketType.workFlow" [settings]="adminSettings" formControlName="adminList" class="test form-control" aria-required></angular2-multiselect> -->
+  
+  <div [hidden]="workFlow.valid || workFlow.pristine" class="alert alert-danger">
+  
+  WorkFlow is Required
+  
+  </div>
+  
+  
+  </div>
+  
+  
+  
+  <div class="form-group">
+  
+  <label for="archiveId">Status</label>
+  
+  <select class="form-control" [(ngModel)]="ticketType.archiveId" name = "archiveId" id="archiveId" #archiveId="ngModel" required >
+  
+  <option *ngFor="let archiveId of archiveList" [value]= "archiveId">
+  
+  {{archiveId}}
+  
+  </option>
+  
+  </select>
+  
+  <div [hidden]="archiveId.valid || archiveId.pristine" class="alert alert-danger">
+  
+  Status is Required
+  
+  </div>
+  
+  </div>
+  
+  
+  
+  
+  <div *ngIf="reachBy===0" >
+  
+  <button class="btn btn-success button" (click)="createTicketType()" [disabled]="!tickettypeform.form.valid">Create</button>
+  
+  </div>
+  
+  <div *ngIf="reachBy===1" >
+  
+  <button class="btn btn-success button" (click)="updateTicketType()" [disabled]="!tickettypeform.form.valid">Update</button>
+  
+  </div>
+  
+  
+  
+  
+  
+  </form>
+  
+  </div>

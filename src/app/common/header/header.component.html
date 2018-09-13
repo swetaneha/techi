@@ -1,0 +1,38 @@
+
+<header class="container-fluid">
+    <div class="row">
+            <div class="col-xl-2 col-lg-1 col-md-2 logo">
+                    <img src="assets/img/logo.png">
+            </div>
+             <div class="col-xl-6 col-lg-6 col-md-6 tms">
+                     Ticket Management System
+            </div>
+    
+                    
+        
+        <div class="col-xl-1 col-lg-2 col-md-1 " id="hide1" *ngIf="isHeaderEnabled"> 
+                <div class="user" *ngIf = "employeeDetails">
+                        Hello,
+                        <div>{{employeeDetails.fName}} 
+                        {{ employeeDetails.lName }} </div>
+                </div>
+         </div>
+         <div class="col-xl-1 col-lg-1 col-md-1" id="hide2"  *ngIf="isHeaderEnabled">
+                <div class="dropdown" >
+                        <button class="dropbtn">
+                                <i class="material-icons icon">album</i>
+                        </button>
+
+                        <div class="dropdown-content">
+                          <a  (click)="adminConfiguration()">ADMIN CONFIGURATION</a>
+                          <a  (click)="logOut()">LOGOUT</a> 
+                        </div>
+                 </div>
+        </div>
+
+
+               
+            
+   </div>
+</header>  
+
