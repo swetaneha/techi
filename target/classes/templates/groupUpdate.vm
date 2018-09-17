@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+		Hello,<br>
+		<br> Your group ${groupName} has been successfully updated by ${adminName}.<br>
+		<br> Thank You.
+	</p>
+</body>
+</html>

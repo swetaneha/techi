@@ -1,0 +1,7 @@
+logging:
+  level:
+    org.springframework.web: ERROR
+    root: ERROR
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    

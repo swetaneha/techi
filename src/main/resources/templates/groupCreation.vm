@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+		Hello,<br>
+		<br> You have been successfully added to a ${groupName} Group.<br>
+		<br> Thank You.
+	</p>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Dell
+Build-Jdk: 10.0.1
+Implementation-Title: ticketmanagementsystem
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.tricon
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/ticketmanagementsystem
+Created-By: Maven Integration for Eclipse
+
