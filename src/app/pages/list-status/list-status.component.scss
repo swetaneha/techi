@@ -1,0 +1,39 @@
+$color_2: white;
+$color_3: black;
+$font_family_1: Poppins;
+$background_color_1: #01c0c8;
+
+.container{
+	margin-left: 21%;
+table {
+    counter-reset: section;
+}
+h5::before {
+    counter-increment: section;
+    content: counter(section);
+}
+.button {
+	background-color: $background_color_1;
+	border: none;
+	color: $color_2;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 22px;
+	cursor: pointer;
+	border-radius: 12px;
+	height: 40px;
+	width: 250px;
+	margin-top: 2%;
+	font-family: $font_family_1;
+	margin-left: 200px;
+}
+button {
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.spacing{
+    margin-top: 10%;
+}
+}

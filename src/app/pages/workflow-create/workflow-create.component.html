@@ -1,0 +1,133 @@
+<p>
+  workflow-create works!
+</p>
+<app-sidenav></app-sidenav>
+<div class="container">
+
+  <div >
+  
+  <h1>Create Workflow</h1>
+  
+  <form>
+  
+   
+  
+        <div class="form-group">
+        
+        <label for="workflowName">Workflow Name</label>
+        
+              <input type="text" class="form-control" id="workflowName"
+              
+              [(ngModel)]="workflow.name" [ngModelOptions]="{standalone: true}" name="workflowName">
+        
+        </div>
+        
+   
+  
+  <div class="form-group">
+  
+  <label for="description">Description</label>
+  
+  <input type="text" class="form-control" id="description"[(ngModel)]="workflow.description" [ngModelOptions]="{standalone: true}" name="description">
+  
+  </div>
+  
+
+  
+  <div class="form-group">
+  
+  <label for="archiveId"></label>
+  
+  <!-- <input type="text" class="form-control" id="archiveId"
+  
+  [(ngModel)]="workflow.archiveId" name="archiveId"> -->
+
+  <!-- <input type="checkbox" [(ngModel)]="workflow.isActive" id="activeId" [ngModelOptions]="{standalone: true}" /><b> Is not Active </b>  -->
+  
+  </div>
+  
+   <div>
+
+  
+      <!-- ############################################################################################# -->
+
+      <!-- <div class="col-sm-3">
+        <div class="card card-outline-primary mb-3" droppable [dragOverClass]="'drag-target-border-green'" 
+            [dragHintClass]="'drag-hint'" (onDrop)="onVegetableDrop($event)">
+            <div class="card-header card-inverse card-primary">Available Statuses:</div>
+            <div class="card-block scroll-list">
+                <ul class="list-group-item" >
+                    <li draggable *ngFor="let status of statusList">{{ status.status }} </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card card-outline-primary mb-3" droppable [dragOverClass]="'drag-target-border'" 
+            [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event)">
+            <div class="card-header card-inverse card-primary">Drag and Drop required Statuses:</div>
+            <div class="card-block scroll-list">
+                <ul class="list-group-item">
+                    <li draggable>Coffee</li>
+                    <li draggable>Tea</li>
+                    <li draggable>Milk</li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="row">
+    <div class="col-sm-3">
+        <div class="card card-outline-primary mb-3" droppable [dropScope]="'swap-target-1'" [dragOverClass]="'drag-target-border'"
+            [dragHintClass]="'drag-hint'" (onDrop)="onList1Drop($event)">
+            <div class="card-header card-inverse card-primary"><b>Available Statuses:</b></div>
+            <div class="card-block scroll-list">
+                <ul class="list-group">
+                    <li draggable *ngFor="let item of list1" [dragScope]="'swap-target-2'" [dragClass]="'drag-over'" [dragData]="item" class="list-group-item ">
+                        {{item.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="card card-outline-primary mb-3" droppable [dropScope]="'swap-target-2'" [dragOverClass]="'drag-target-border'"
+            [dragHintClass]="'drag-hint'" (onDrop)="onList2Drop($event)">
+            <div class="card-header card-inverse card-primary"><b>Selected Statuses:</b></div>
+            <div class="card-block scroll-list">
+                <ul class="list-group">
+                    <li draggable *ngFor="let item of list2" [dragScope]="'swap-target-1'" [dragClass]="'drag-over'" [dragData]="item" class="list-group-item">
+                        {{item.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+
+  </div>
+
+
+
+  
+   <div>
+
+    <button type="button" class="btn btn-success" id="button" (click)="onSubmit()">Submit</button>  
+
+   </div>
+
+  
+  </form>
+  
+  </div>
+  
+   
+  
+  
+  
+  
+  </div>
+  

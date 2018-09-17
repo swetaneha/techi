@@ -1,0 +1,25 @@
+<app-sidenav></app-sidenav>
+
+<div class="container">
+  <div>
+          <form (ngSubmit)="onSubmit()">
+           <div class="form-status">       
+              <label for="input"><h4>Status:</h4></label>
+              <input  type="text" class="form-control" [(ngModel)]="status.status" [ngModelOptions]="{standalone: true}" placeholder="status" id="input" placeholder="status"/>
+          </div>
+
+          <div>
+  
+          <label for="inputstatus"><h4>Active/Inactive:</h4></label>
+  
+          <input type="text" id="inputstatus" class="form-control" [(ngModel)]="status.isArchived" [ngModelOptions]="{standalone: true}" placeholder="Status of status"/>
+          </div>
+          <br>
+          <div class="bt">
+          <!-- <button type="submit" id="button" class="btn btn-success"><a href="/liststatus">go back</a></button> -->
+  
+          <button (click)="updateStatus(status)" id="button" class="btn btn-success"><a href="/liststatus">Submit</a></button>
+          </div>
+          </form>
+  </div>
+  </div>
